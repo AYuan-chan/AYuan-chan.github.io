@@ -59,31 +59,28 @@ pre.highlight code,
 }
 
 /* 渐变出现动画 */
+/* 修改后的动画部分 */
 .fade-in {
-  opacity: 0;                  /* 初始透明 */
-  animation: fadeIn 2s ease forwards;
+  opacity: 0;
+  /* 使用 forwards 确保动画结束后保持显示状态 */
+  animation: fadeIn 0.8s ease-out forwards; 
 }
 
-.fade-in:nth-child(1) {
-  animation-delay: 0.5s;       /* 第一个元素延迟 0.5 秒出现 */
-}
-
-.fade-in:nth-child(2) {
-  animation-delay: 1.5s;       /* 第二个元素延迟 1.5 秒出现 */
-}
-
-.fade-in:nth-child(3) {
-  animation-delay: 2.5s;       /* 第三个元素延迟 2.5 秒出现 */
+/* 使用 SCSS 循环为前 10 篇文章自动生成延迟 */
+@for $i from 1 through 10 {
+  li.fade-in:nth-child(#{$i}) {
+    animation-delay: #{$i * 0.15}s;
+  }
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px); /* 初始稍微下移 */
+    transform: translateY(15px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);    /* 回到正常位置 */
+    transform: translateY(0);
   }
 }
 
