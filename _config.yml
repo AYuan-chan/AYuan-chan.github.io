@@ -1,5 +1,5 @@
 # Site settings
-title: Jekyll-Uno
+title: Welcome to my channel!
 description: 'Jekyll-Uno - a minimal, responsive theme for Jekyll'
 url: 'https://ayuan-chan.github.io/'
 baseurl: ''
@@ -8,8 +8,8 @@ baseurl: ''
 # disable_landing_page: true
 
 author:
-  name: 'Josh Gerdes'
-  email: josh@joshgerdes.com
+  name: 'AYuan'
+  email: xsy20040408@outlook.com
   twitter_username: joshgerdes
   facebook_username: joshgerdes
   github_username:  joshgerdes
