@@ -34,11 +34,16 @@ sass:
     sass_dir: _sass
     style: compressed
 
+# kramdown 配置
 kramdown:
-  # use Github Flavored Markdown
+  # 启用数学公式支持
+  math_engine: mathjax
+  # 允许解析 HTML 块
+  parse_block_html: true
+  # GitHub Flavored Markdown
   input: GFM
-  # do not replace newlines by <br>s
-  hard_wrap: false
+  # 语法高亮
+  syntax_highlighter: rouge
 
 plugins: ['jekyll-paginate']
 exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
