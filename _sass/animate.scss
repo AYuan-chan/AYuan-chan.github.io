@@ -3430,3 +3430,26 @@
 	-o-animation-name: rollOut;
 	animation-name: rollOut;
 }
+
+/* 定义渐变并向上滑动的动画 */
+@keyframes fadeIn {
+	from {
+	  opacity: 0;
+	  transform: translateY(20px);
+	}
+	to {
+	  opacity: 1;
+	  transform: translateY(0);
+	}
+  }
+  
+  /* 创建一个类，方便在 HTML 中调用 */
+  .fade-in-item {
+	opacity: 0; /* 初始设为透明 */
+	animation: fadeIn 1.5s ease-out forwards; /* 1.5秒完成，结束后停留在可见状态 */
+  }
+  
+  /* 设置不同的延迟，让头像、标题、描述文字依次出现 */
+  .delay-1 { animation-delay: 0.3s; }
+  .delay-2 { animation-delay: 0.8s; }
+  .delay-3 { animation-delay: 1.3s; }

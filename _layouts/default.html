@@ -2,6 +2,24 @@
 <html>
   {% include head.html %}
 
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* 赋予动画属性的通用类 */
+    .fade-in-item {
+      opacity: 0;
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    /* 不同的延迟时间，营造错落感 */
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.5s; }
+    .delay-3 { animation-delay: 0.8s; }
+  </style>
+
   <script>
     window.MathJax = {
       tex: {
@@ -9,9 +27,7 @@
         displayMath: [['$$', '$$'], ['\\[', '\\]']],
         processEscapes: true
       },
-      svg: {
-        fontCache: 'global'
-      }
+      svg: { fontCache: 'global' }
     };
   </script>
   
@@ -22,7 +38,7 @@
     {% include header.html %}
 
     <div class="content-wrapper">
-      <div class="content-wrapper__inner">
+      <div class="content-wrapper__inner fade-in-item delay-1">
         {{ content }}
       </div>
 

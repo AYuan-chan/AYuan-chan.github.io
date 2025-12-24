@@ -3,6 +3,7 @@
 @import "uno";
 @import "tables";
 @import "monokai";
+@import "animate";
 
 /* Modifications */
 
@@ -58,30 +59,7 @@ pre.highlight code,
   border-radius:100%;
 }
 
-/* 渐变出现动画 */
-/* 修改后的动画部分 */
-.fade-in {
-  opacity: 0;
-  /* 使用 forwards 确保动画结束后保持显示状态 */
-  animation: fadeIn 0.8s ease-out forwards; 
-}
 
-/* 使用 SCSS 循环为前 10 篇文章自动生成延迟 */
-@for $i from 1 through 10 {
-  li.fade-in:nth-child(#{$i}) {
-    animation-delay: #{$i * 0.15}s;
-  }
-}
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 
