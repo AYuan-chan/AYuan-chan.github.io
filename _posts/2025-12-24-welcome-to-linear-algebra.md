@@ -28,11 +28,12 @@ categories: math
 
 ------
 
-在线性代数中有最基本的两种向量运算，向量与数字的运算和向量与向量的运算。我们可以通过数乘实现向量$\vec{v}$ 与数字$c$相乘，写作$c$$\vec{v}$，再通过向量相加，即可得到线性组合$c\vec{v} + d\vec{w}$,即
+在线性代数中有最基本的两种向量运算：向量与数字的运算和向量与向量的运算。
+
+我们可以通过数乘实现向量 $\vec{v}$ 与数字 $c$ 相乘，写作 $c\vec{v}$。再通过向量相加，即可得到线性组合 $c\vec{v} + d\vec{w}$，即：
+
 $$
-c\vec{v} + d\vec{w} 
-= c \begin{bmatrix} 1 \\ 1 \end{bmatrix} 
-+ d \begin{bmatrix} 2 \\ 3 \end{bmatrix} 
-= \begin{bmatrix} c + 2d \\ c + 3d \end{bmatrix}
+c\vec{v} + d\vec{w} = c \begin{bmatrix} 1 \\ 1 \end{bmatrix} + d \begin{bmatrix} 2 \\ 3 \end{bmatrix} = \begin{bmatrix} c + 2d \\ c + 3d \end{bmatrix}
 $$
-向量$c$$\vec{v}$会沿着一条直线，若$\vec{w}$不和其共线，则这个线性组合$c\vec{v} + d\vec{w}$可以填充整个二维平面
+
+向量 $c\vec{v}$ 会沿着一条直线运动；若 $\vec{w}$ 不与其共线，则这个线性组合 $c\vec{v} + d\vec{w}$ 可以填充整个二维平面。
