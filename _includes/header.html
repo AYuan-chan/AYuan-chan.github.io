@@ -10,19 +10,20 @@
     <div class="panel-main__inner panel-inverted">
       <div class="panel-main__content">
         <a href="{{ site.baseurl }}/" title="link to home of {{ site.title }}">
-          <img src="{{ site.baseurl }}/images/profile.jpg" class="user-image" alt="My Profile Photo">
-          <h1 class="panel-cover__title panel-title">{{ site.title }}</h1>
+          <img src="{{ site.baseurl }}/images/profile.jpg" class="user-image fade-in-item" alt="My Profile Photo">
+          <h1 class="panel-cover__title panel-title fade-in-item delay-1">{{ site.title }}</h1>
         </a>
         <hr class="panel-cover__divider">
-        <p class="panel-cover__description">{{ site.description }}</p>
+        <p class="panel-cover__description fade-in-item delay-2">{{ site.description }}</p>
         <hr class="panel-cover__divider panel-cover__divider--secondary">
 
         <div class="navigation-wrapper">
 
           <nav class="cover-navigation cover-navigation--primary">
             <ul class="navigation">
-              <li class="navigation__item"><a href="{{ site.baseurl }}/#blog" title="link to {{ site.title }} blog"
-                  class="blog-button">Blog</a></li>
+              <li class="navigation__item fade-in-item delay-3">
+                <a href="{{ site.baseurl }}/#blog" title="link to {{ site.title }} blog" class="blog-button">Blog</a>
+              </li>
             </ul>
           </nav>
 
@@ -30,8 +31,7 @@
             <ul class="navigation">
 
               {% if site.author.twitter_username %}
-              <!-- Twitter -->
-              <li class="navigation__item">
+              <li class="navigation__item fade-in-item delay-3">
                 <a href="http://twitter.com/{{ site.author.twitter_username }}"
                   title="@{{ site.author.twitter_username }} on Twitter" target="_blank">
                   <i class="icon icon-social-twitter"></i>
@@ -41,8 +41,7 @@
               {% endif %}
 
               {% if site.author.facebook_username %}
-              <!-- Facebook -->
-              <li class="navigation__item">
+              <li class="navigation__item fade-in-item delay-3">
                 <a href="http://fb.me/{{ site.author.facebook_username }}"
                   title="{{ site.author.facebook_username }} on Facebook" target="_blank">
                   <i class="icon icon-social-facebook"></i>
@@ -52,8 +51,7 @@
               {% endif %}
 
               {% if site.author.linkedin_username %}
-              <!-- LinkedIn -->
-              <li class="navigation__item">
+              <li class="navigation__item fade-in-item delay-3">
                 <a href="https://www.linkedin.com/in/{{ site.author.linkedin_username }}"
                   title="{{ site.author.linkedin_username }} on LinkedIn" target="_blank">
                   <i class="icon icon-social-linkedin"></i>
@@ -63,8 +61,7 @@
               {% endif %}
 
               {% if site.author.github_username %}
-              <!-- GitHub -->
-              <li class="navigation__item">
+              <li class="navigation__item fade-in-item delay-3">
                 <a href="https://www.github.com/{{ site.author.github_username }}"
                   title="{{ site.author.github_username }} on GitHub" target="_blank">
                   <i class="icon icon-social-github"></i>
@@ -74,8 +71,7 @@
               {% endif %}
 
               {% if site.author.email %}
-              <!-- Email -->
-              <li class="navigation__item">
+              <li class="navigation__item fade-in-item delay-3">
                 <a href="mailto:{{ site.author.email }}" title="Email {{ site.author.email }}" target="_blank">
                   <i class="icon icon-mail"></i>
                   <span class="label">Email</span>
@@ -83,8 +79,7 @@
               </li>
               {% endif %}
 
-              <!-- RSS -->
-              <li class="navigation__item">
+              <li class="navigation__item fade-in-item delay-3">
                 <a href="{{ site.baseurl }}/feed.xml" title="Subscribe" target="_blank">
                   <i class="icon icon-rss"></i>
                   <span class="label">RSS</span>
